@@ -298,6 +298,7 @@ header {
   gap: 10px;
   padding-top: 16px;
   margin-bottom: 24px;
+  justify-content: center;
 }
 .studio-amenities .amenity-item {
   display: flex;
@@ -389,6 +390,7 @@ header {
   border-top: none;
   border-radius: 0 0 12px 12px;
   height: 100%;
+  text-align: center;
 }
 .studio-listings .list .studio .studio-content h2 {
   margin-bottom: 6px !important;
@@ -406,7 +408,7 @@ header {
   gap: 32px;
 }
 .split-section .inner .text {
-  text-align: left;
+  text-align: center;
 }
 .split-section img {
   width: 100%;
@@ -461,6 +463,9 @@ footer .footer-container .copyright p {
 
 /* --- Media Queries --- */
 @media (min-width: 900px) {
+  .studio-amenities {
+    justify-content: flex-start;
+  }
   .banner {
     height: 600px;
   }
@@ -484,8 +489,14 @@ footer .footer-container .copyright p {
     flex-direction: column;
     height: 100%;
   }
+  .studio-listings .list .studio .studio-content {
+    text-align: left;
+  }
   .split-section {
     padding: 80px 0;
+  }
+  .split-section .inner .text {
+    text-align: left;
   }
   .split-section.stargazers-paradise {
     direction: rtl;

@@ -326,6 +326,7 @@ header {
     gap: 10px;
     padding-top: 16px;
     margin-bottom: 24px;
+    justify-content: center;
 
     .amenity-item {
         display: flex;
@@ -372,7 +373,7 @@ header {
         flex-direction: column;
         align-items: center;
         gap: 16px;
-            max-width: 750px;
+        max-width: 750px;
         margin: auto;
     }
 
@@ -423,6 +424,7 @@ header {
                 border-top: none;
                 border-radius: 0 0 12px 12px;
                 height: 100%;
+                text-align: center;
 
                 & h2 {
                     margin-bottom: 6px !important;
@@ -446,7 +448,7 @@ header {
         gap: 32px;
 
         .text {
-            text-align: left;
+            text-align: center;
         }
     }
 
@@ -514,66 +516,81 @@ footer {
 /* --- Media Queries --- */
 
 @media (min-width: 900px) {
-    .banner {
-        height: 600px;
+    .studio-amenities {
+        justify-content: flex-start;
     }
 
-    footer {
-        .footer-container {
-            .footer-links {
-                flex-direction: row;
-                gap: 72px;
+.banner {
+    height: 600px;
+}
 
-                a {
+footer {
+    .footer-container {
+        .footer-links {
+            flex-direction: row;
+            gap: 72px;
 
-                    color: var(--accent-color);
-                    font-family: Cardo, serif;
-                    font-size: 20px;
-                }
+            a {
 
+                color: var(--accent-color);
+                font-family: Cardo, serif;
+                font-size: 20px;
+            }
+
+        }
+    }
+}
+
+.studio-listings {
+    .list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: stretch;
+
+        .studio {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            .studio-content {
+                text-align: left;
             }
         }
     }
+}
 
-    .studio-listings {
-        .list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-            align-items: stretch;
+.split-section {
+    padding: 80px 0;
 
-            .studio {
-                display: flex;
-                flex-direction: column;
-                height: 100%;
-            }
+    .inner {
+
+        .text {
+            text-align: left;
         }
     }
 
-    .split-section {
-        padding: 80px 0;
+    &.stargazers-paradise {
+        direction: rtl;
+        background-color: var(--accent-color);
 
-        &.stargazers-paradise {
-            direction: rtl;
-            background-color: var(--accent-color);
-
-            .text {
-                margin-right: 20px;
-            }
-        }
-
-        &.stunning-views {
-            .text {
-                margin-left: 20px;
-            }
-        }
-
-        .inner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
+        .text {
+            margin-right: 20px;
         }
     }
+
+    &.stunning-views {
+        .text {
+            margin-left: 20px;
+        }
+    }
+
+    .inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
 }
 
 @media (min-width: 1200px) {
