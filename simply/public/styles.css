@@ -335,25 +335,24 @@ header {
 
 .intro {
   background-color: var(--accent-color);
+  padding: 70px 0 20px 0;
 }
-.intro .container {
+.intro .inner {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: 80px 0 20px 0;
-  text-align: center;
   align-items: center;
+  gap: 16px;
+  max-width: 750px;
   margin: auto;
-  max-width: 740px;
 }
-.intro .container img {
+.intro img {
   max-width: 312px;
   width: 100%;
   height: auto;
   margin-bottom: 8px;
 }
-.intro .container h1,
-.intro .container p {
+.intro h1,
+.intro p {
   text-align: center;
 }
 
