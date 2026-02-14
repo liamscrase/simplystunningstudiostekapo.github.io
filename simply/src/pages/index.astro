@@ -195,4 +195,115 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </div>
+
+  <div class="reviews-section">
+    <div class="container">
+      <h2>What Our Guests Say</h2>
+      <div id="reviews-slider" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="review-card">
+                <div class="quote-mark">"</div>
+                <p class="review-text">
+                  I stayed there one night with my husband. Would have loved to stay longer. Beautiful view from lake, super convenient studio with everything you may need (and more): grill, kitchen utensils, washing machine, spices, TV, etc.
+                </p>
+                <div class="review-author">Daniela</div>
+                <div class="review-date">February 2025</div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="review-card">
+                <div class="quote-mark">"</div>
+                <p class="review-text">
+                  Dale and Stacey were just the best. The unit was perfect and the view was unbelievable!
+                </p>
+                <div class="review-author">Richard</div>
+                <div class="review-date">October 2025</div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="review-card">
+                <div class="quote-mark">"</div>
+                <p class="review-text">
+                  Your wake up view! Perfect location to see a great night sky and nearby night sky activities and tours.
+                </p>
+                <div class="review-author">Giselle</div>
+                <div class="review-date">November 2025</div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="review-card">
+                <div class="quote-mark">"</div>
+                <p class="review-text">
+                  Really cosy and clean apartment! We stayed here last October and it's one of our favourite accomodation in South island. The apartment has great views of the mountains and it's full furnished. We could so take photos of stars at night.
+                </p>
+                <div class="review-author">Brian</div>
+                <div class="review-date">2020</div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="review-card">
+                <div class="quote-mark">"</div>
+                <p class="review-text">
+                  Literally simply stunning. Very clean and modern house with all the amenities you need. It's also located very near to the lake. A superb comfortable stay.
+                </p>
+                <div class="review-author">Vernon</div>
+                <div class="review-date">2019</div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="review-card">
+                <div class="quote-mark">"</div>
+                <p class="review-text">
+                  Great hosts, very helpful when I left an item behind. Beautiful apartment, modern and clean. Well equipped with a great view.
+                </p>
+                <div class="review-author">Georgia</div>
+                <div class="review-date">2020</div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="review-card">
+                <div class="quote-mark">"</div>
+                <p class="review-text">
+                  We just loved this place. Perfect for a family of four. Superb views of Lake Tekapo. Comfortable, warm and in a quiet location.
+                </p>
+                <div class="review-author">Hamish</div>
+                <div class="review-date">2020</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="reviews-button-container">
+        <a
+          class="book-button"
+          target="_blank"
+          href="https://www.google.com/travel/search?q=simply%20stunning%20studios%20lake%20tekapo&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C72958624%2C73059275%2C73064764&hl=en-NZ&gl=nz&cs=1&ssta=1&ts=CAEaKwopEicyJTB4NmQyYjc1Nzk4NmRlOWRlYjoweDM5YjAwMDVlNDBkZjZkMjQ&qs=CAEyE0Nnb0lwTnI5aHVTTGdOZzVFQUU4Ag&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwi494DWutiSAxUAAAAAHQAAAAAQBw"
+          >View all Google reviews</a
+        >
+      </div>
+    </div>
+  </div>
 </Layout>
+
+<script>
+  import Splide from "@splidejs/splide";
+  import "@splidejs/splide/css";
+
+  new Splide("#reviews-slider", {
+    type: "loop",
+    gap: "1.5rem",
+    arrows: true,
+    pagination: false,
+    autoplay: false,
+
+    // ⭐️ RESPONSIVE SETTINGS
+    perPage: 3, // Desktop default
+
+    breakpoints: {
+      1024: { perPage: 2 }, // Tablets
+      640: { perPage: 1 }, // Mobile
+    },
+  }).mount();
+</script>
